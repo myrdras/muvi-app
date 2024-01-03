@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="./assets/logo.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/logo-32x32.png">
+  <title>Muvi App</title>
+
+  <link href="https://dev.iconly.io/public/7lXeL2MwQRGA/iconly.css" rel="stylesheet"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Livvic:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/app.css" />
+</head>
+
+<body>
+  <header id="header" class="header-container header-container--long header-detail">
+    <h1 class="header-title inactive">
+      <span><img src="./assets/logo.svg" alt="Muvi"></span>
+      <span><i class="ily-li-search"></i><i class="ily-li-notification"></i></span>
+    </h1>
+    <div class="hero-details inactive">
+      <h2 class="hero-title">Dr. Strange 2</h2>
+      <span class="hero-categories">Action, Superhero, Science Fiction, ...</span>
+      <div class="hero-buttons">
+        <button class="filled-tag"><i class="ily-bo-play"></i>Play</button>
+        <button class="border-tag"><i class="ily-ex-plus"></i>My List</button>
+      </div>
+    </div>
+
+    <h1 class="header-title header-title--homeAction inactive">
+      <span><i class="ily-li-arrow-left"></i>Top 10 Movies This Week</span>
+      <span><i class="ily-li-search"></i></span>
+    </h1>
+
+    <h1 class="header-title header-title--homeAction inactive">
+      <span><i class="ily-li-arrow-left"></i>Notification</span>
+      <span><i class="ily-li-more-circle"></i></span>
+    </h1>
+
+    <h1 class="header-title header-title--detail">
+      <span><i class="ily-li-arrow-left"></i></span>
+      <span><i class="ily-ex-cast"></i></span>
+    </h1>
+
+    <form id="searchForm" class="header-searchForm inactive">
+      <label for="q"><i class="ily-li-search"></i></label>
+      <input type="text" name="q" placeholder="Search" />
+      <span id="filterBtn"><i class="ily-bo-filter"></i></span>
+    </form>
+  </header>
+
+  <div class="overlay inactive"></div>
+
+  <nav class="navbar">
+    <li class="nav-item"><i class="ily-li-home"></i><span>Home</span></li>
+    <li class="nav-item selected"><i class="ily-bo-discovery"></i><span>Explore</span></li>
+    <li class="nav-item"><i class="ily-li-bookmark"></i><span>My List</span></li>
+    <li class="nav-item"><i class="ily-li-download"></i><span>Download</span></li>
+    <li class="nav-item"><i class="ily-li-profile"></i><span>Profile</span></li>
+  </nav>
+
+  <section id="sortFilter" class="sortFilter-container inactive">
+    <h1 class="filter-title">Sort & Filter</h1>
+    <hr>
+    <div class="filter-list">
+      <div class="filterTag-container">
+        <h2 class="filterTag-title">Categories</h2>
+        <div class="filterTags">
+          <span class="border-tag">Movie</span>
+          <span class="filled-tag">TV Shows</span>
+          <span class="border-tag">K-Drama</span>
+          <span class="border-tag">Anime</span>
+        </div>
+      </div>
+      <div class="filterTag-container">
+        <h2 class="filterTag-title">Regions</h2>
+        <div class="filterTags">
+          <span class="filled-tag">All Regions</span>
+          <span class="border-tag">US</span>
+          <span class="border-tag">South Korea</span>
+          <span class="border-tag">China</span>
+        </div>
+      </div>
+      <div class="filterTag-container">
+        <h2 class="filterTag-title">Genre</h2>
+        <div class="filterTags">
+          <span class="border-tag">Action</span>
+          <span class="border-tag">Comedy</span>
+          <span class="filled-tag">Romance</span>
+          <span class="border-tag">Thriller</span>
+        </div>
+      </div>
+      <div class="filterTag-container">
+        <h2 class="filterTag-title">Time/Periods</h2>
+        <div class="filterTags">
+          <span class="border-tag">All Periods</span>
+          <span class="filled-tag">2022</span>
+          <span class="border-tag">2021</span>
+          <span class="border-tag">2020</span>
+        </div>
+      </div>
+      <div class="filterTag-container">
+        <h2 class="filterTag-title">Sort</h2>
+        <div class="filterTags">
+          <span class="filled-tag">Popularity</span>
+          <span class="border-tag">Latest Release</span>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="filter-buttons">
+      <button class="secondary-tag">Reset</button>
+      <button class="filled-tag">Apply</button>
+    </div>
+  </section>
+
+  <section id="topPreview" class="movieList-container inactive">
+    <div class="movieList-header">
+      <h2 class="movieList-title">Top 10 Movies This Week</h2>
+      <p class="movieList-more">See all</p>
+    </div>
+
+    <article class="movieSmallCards-container">
+      <div class="movie-container">
+        <span class="movie-rating">9.8</span>
+        <img
+          src="./assets/Image.jpg"
+          class="movie-img"
+          alt="Nombre de la película"
+        />
+      </div>
+      <div class="movie-container">
+        <span class="movie-rating">9.8</span>
+        <img
+          src="./assets/Image.jpg"
+          class="movie-img"
+          alt="Nombre de la película"
+        />
+      </div>
+      <div class="movie-container">
+        <span class="movie-rating">9.8</span>
+        <img
+          src="./assets/Image.jpg"
+          class="movie-img"
+          alt="Nombre de la película"
+        />
+      </div>
+    </article>
+  </section>
+
+  <section id="newPreview" class="movieList-container inactive">
+    <div class="movieList-header">
+      <h2 class="movieList-title">New Releases</h2>
+      <p class="movieList-more">See all</p>
+    </div>
+
+    <article class="movieSmallCards-container">
+      <div class="movie-container">
+        <span class="movie-rating">9.8</span>
+        <img
+          src="./assets/Image.jpg"
+          class="movie-img"
+          alt="Nombre de la película"
+        />
+      </div>
+    </article>
+  </section>
+  
+  <section id="bigCards" class="movieList-container inactive">
+    <article class="movieBigCards-container">
+      <div class="movie-container">
+        <span class="movie-rating">9.8</span>
+        <img
+          src="./assets/Image.jpg"
+          class="movie-img"
+          alt="Nombre de la película"
+        />
+      </div>
+      <div class="movie-container">
+        <span class="movie-rating">9.8</span>
+        <img
+          src="./assets/Image.jpg"
+          class="movie-img"
+          alt="Nombre de la película"
+        />
+      </div>
+      <div class="movie-container">
+        <span class="movie-rating">9.8</span>
+        <img
+          src="./assets/Image.jpg"
+          class="movie-img"
+          alt="Nombre de la película"
+        />
+      </div>
+      <div class="movie-container">
+        <span class="movie-rating">9.8</span>
+        <img
+          src="./assets/Image.jpg"
+          class="movie-img"
+          alt="Nombre de la película"
+        />
+      </div>
+      <div class="movie-container">
+        <span class="movie-rating">9.8</span>
+        <img
+          src="./assets/Image.jpg"
+          class="movie-img"
+          alt="Nombre de la película"
+        />
+      </div>
+    </article>
+  </section>
+  
+  <section id="notification" class="movieList-container inactive">
+    <article class="moviePlayCards-container">
+      <div class="movie-container">
+        <div class="movie-play">
+          <i class="ily-bo-play"></i>
+          <img
+            src="./assets/Image.jpg"
+            class="movie-img"
+            alt="Nombre de la película"
+          />
+        </div>
+        <div class="movieDetails-container">
+          <h3 class="movie-title">Avatar 2<span class="movie-date">12/17/2024</span></h3>
+          <p class="movie-details">Details</p>
+          <div class="movie-tag">
+            <span>New Release</span>
+            <span><i class="ily-cu-delete"></i></span>
+          </div>
+        </div>
+      </div>
+      <div class="movie-container">
+        <div class="movie-play">
+          <i class="ily-bo-play"></i>
+          <img
+            src="./assets/Image.jpg"
+            class="movie-img"
+            alt="Nombre de la película"
+          />
+        </div>
+        <div class="movieDetails-container">
+          <h3 class="movie-title">Avatar 2<span class="movie-date">12/17/2024</span></h3>
+          <p class="movie-details">Details</p>
+          <div class="movie-tag">
+            <span>New Release</span>
+            <span><i class="ily-cu-delete"></i></span>
+          </div>
+        </div>
+      </div>
+      <div class="movie-container">
+        <div class="movie-play">
+          <i class="ily-bo-play"></i>
+          <img
+            src="./assets/Image.jpg"
+            class="movie-img"
+            alt="Nombre de la película"
+          />
+        </div>
+        <div class="movieDetails-container">
+          <h3 class="movie-title">Avatar 2<span class="movie-date">12/17/2024</span></h3>
+          <p class="movie-details">Details</p>
+          <div class="movie-tag">
+            <span>New Release</span>
+            <span><i class="ily-cu-delete"></i></span>
+          </div>
+        </div>
+      </div>
+      <div class="movie-container">
+        <div class="movie-play">
+          <i class="ily-bo-play"></i>
+          <img
+            src="./assets/Image.jpg"
+            class="movie-img"
+            alt="Nombre de la película"
+          />
+        </div>
+        <div class="movieDetails-container">
+          <h3 class="movie-title">Avatar 2<span class="movie-date">12/17/2024</span></h3>
+          <p class="movie-details">Details</p>
+          <div class="movie-tag">
+            <span>New Release</span>
+            <span><i class="ily-cu-delete"></i></span>
+          </div>
+        </div>
+      </div>
+      <div class="movie-container">
+        <div class="movie-play">
+          <i class="ily-bo-play"></i>
+          <img
+            src="./assets/Image.jpg"
+            class="movie-img"
+            alt="Nombre de la película"
+          />
+        </div>
+        <div class="movieDetails-container">
+          <h3 class="movie-title">Avatar 2<span class="movie-date">12/17/2024</span></h3>
+          <p class="movie-details">Details</p>
+          <div class="movie-tag">
+            <span>New Release</span>
+            <span><i class="ily-cu-delete"></i></span>
+          </div>
+        </div>
+      </div>
+      <div class="movie-container">
+        <div class="movie-play">
+          <i class="ily-bo-play"></i>
+          <img
+            src="./assets/Image.jpg"
+            class="movie-img"
+            alt="Nombre de la película"
+          />
+        </div>
+        <div class="movieDetails-container">
+          <h3 class="movie-title">Avatar 2<span class="movie-date">12/17/2024</span></h3>
+          <p class="movie-details">Details</p>
+          <div class="movie-tag">
+            <span>New Release</span>
+            <span><i class="ily-cu-delete"></i></span>
+          </div>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <section id="movieDetails" class="movieList-container">
+    <h1 class="movieList-header">
+      Avatar: The Way of Water
+      <i class="ily-cu-bookmark"></i>
+      <i class="ily-cu-send"></i>
+    </h1>
+    <div class="details-list">
+      <span class="details-rating" style="--rating: 9.8;">
+        <i class="ily-bo-star"></i>
+        9.8
+        <i class="ily-li-arrow-right-2"></i>
+      </span>
+      <span class="details-year">2022</span>
+      <span class="border-tag">13+</span>
+      <span class="border-tag">United States</span>
+      <span class="border-tag">Subtitle</span>
+    </div>
+    <div class="details-buttons">
+      <button class="filled-tag"><i class="ily-bo-play"></i>Play</button>
+      <button class="border-tag"><i class="ily-bo-download"></i>Download</button>
+    </div>
+    <p class="details-categories">Genre: Action, Superhero, Science Fiction, Romance, Thriller, ...</p>
+    <p class="details-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam dolor nobis fugiat doloribus optio. Quaerat quam ullam aliquid, incidunt at non, sed reprehenderit... <span class="details-viewMore">View More</span></p>
+    <div class="details-cast">
+      <div class="details-cast--person">
+        <img src="./assets/person.png" alt="Person">
+        <div class="details-person">
+          <p class="details-personName">James<br>Cameron</p>
+          <p class="details-personRol">Director</p>
+        </div>
+      </div>
+      <div class="details-cast--person">
+        <img src="./assets/person.png" alt="Person">
+        <div class="details-person">
+          <p class="details-personName">Sam<br>Worthington</p>
+          <p class="details-personRol">Cast</p>
+        </div>
+      </div>
+      <div class="details-cast--person">
+        <img src="./assets/person.png" alt="Person">
+        <div class="details-person">
+          <p class="details-personName">Zoe<br>Saldana</p>
+          <p class="details-personRol">Cast</p>
+        </div>
+      </div>
+    </div>
+    <div class="details-menu">
+      <p class="details-tab">Trailers</p>
+      <p class="details-tab">More Like This</p>
+      <p class="details-tab selected">Comments</p>
+    </div>
+    <div class="details-menu-action">
+      <article class="moviePlayCards-container inactive">
+        <div class="movie-container">
+          <div class="movie-play">
+            <i class="ily-bo-play"></i>
+            <img
+              src="./assets/Image.jpg"
+              class="movie-img"
+              alt="Nombre de la película"
+            />
+          </div>
+          <div class="movieDetails-container">
+            <h3 class="movie-title">Trailer 3: Final</h3>
+            <p class="movie-details">1m 45s</p>
+            <div class="movie-tag">
+              <span>Update</span>
+            </div>
+          </div>
+        </div>
+        <div class="movie-container">
+          <div class="movie-play">
+            <i class="ily-bo-play"></i>
+            <img
+              src="./assets/Image.jpg"
+              class="movie-img"
+              alt="Nombre de la película"
+            />
+          </div>
+          <div class="movieDetails-container">
+            <h3 class="movie-title">Trailer 2</h3>
+            <p class="movie-details">1m 17s</p>
+            <div class="movie-tag">
+              <span>Update</span>
+            </div>
+          </div>
+        </div>
+        <div class="movie-container">
+          <div class="movie-play">
+            <i class="ily-bo-play"></i>
+            <img
+              src="./assets/Image.jpg"
+              class="movie-img"
+              alt="Nombre de la película"
+            />
+          </div>
+          <div class="movieDetails-container">
+            <h3 class="movie-title">Trailer 1</h3>
+            <p class="movie-details">57s</p>
+            <div class="movie-tag">
+              <span>Update</span>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="movieBigCards-container inactive">
+        <div class="movie-container">
+          <span class="movie-rating">9.8</span>
+          <img
+            src="./assets/Image.jpg"
+            class="movie-img"
+            alt="Nombre de la película"
+          />
+        </div>
+        <div class="movie-container">
+          <span class="movie-rating">9.8</span>
+          <img
+            src="./assets/Image.jpg"
+            class="movie-img"
+            alt="Nombre de la película"
+          />
+        </div>
+        <div class="movie-container">
+          <span class="movie-rating">9.8</span>
+          <img
+            src="./assets/Image.jpg"
+            class="movie-img"
+            alt="Nombre de la película"
+          />
+        </div>
+        <div class="movie-container">
+          <span class="movie-rating">9.8</span>
+          <img
+            src="./assets/Image.jpg"
+            class="movie-img"
+            alt="Nombre de la película"
+          />
+        </div>
+        <div class="movie-container">
+          <span class="movie-rating">9.8</span>
+          <img
+            src="./assets/Image.jpg"
+            class="movie-img"
+            alt="Nombre de la película"
+          />
+        </div>
+      </article>
+      <article class="comments-container">
+        <div class="movieList-header">
+          <h2 class="movieList-title">24.6K Comments</h2>
+          <p class="movieList-more">See all</p>
+        </div>
+        <div class="comment-container">
+          <div class="comment-header">
+            <img src="./assets/person.png" alt="Person">
+            <span>Kristin Watson</span>
+            <i class="ily-li-more-circle"></i>
+          </div>
+          <p class="comment-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. At eius sint quo praesentium, in asperiores placeat recusandae doloremque repudiandae, earum sapiente. Iste accusamus tempora soluta enim perspiciatis deserunt. Voluptatibus, maiores.</p>
+          <div class="comment-details">
+            <span><i class="ily-bo-heart"></i>938</span>
+            <span>3 days ago</span>
+            <span>Reply</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <footer></footer>
+  
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="./src/secrets.js"></script>
+  <script src="./src/main.js"></script>
+</body>
+</html>
